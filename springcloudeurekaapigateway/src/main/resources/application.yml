@@ -1,0 +1,17 @@
+server:
+  port: 9292
+
+spring:
+  application:
+    name: springcloudapigateway
+
+zuul:
+  routes:
+    springcloudfeignclient:
+      path: /feign/**
+      stripPrefix: false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7171/eureka/
